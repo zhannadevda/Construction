@@ -1,0 +1,339 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  font-family: sans-serif;
+}
+
+img,
+picture,
+video,
+canvas {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 3rem;
+  background: #333;
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+}
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.menu li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+}
+
+.burger-menu {
+  display: none;
+  flex-direction: column;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.burger-menu span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: white;
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.construgtion {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  color: white;
+}
+.blok {
+  background: url(img/frontpage1.jpg);
+  margin: 0;
+  padding: 4em 1em 2em 10%;
+  width: 70%;
+  min-width: 300px;
+}
+.vector1 {
+  display: flex;
+}
+.text1Vector {
+  font-size: 4rem;
+  font-weight: bold;
+  padding: 1.3vh 0 1.3vh 2vw;
+}
+.text2Vector {
+  font-size: 1.3rem;
+  font-weight: bold 50%;
+  margin-top: 2rem;
+  width: 80%;
+}
+.buttonVector {
+  background: #ffb400;
+  border: none;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: bold 50%;
+  cursor: pointer;
+  transition: opacity 0.3s;
+  padding: 1rem 3rem;
+  margin: 2.5rem auto;
+}
+.buttonVector:hover {
+  opacity: 0.8;
+}
+.icon1 {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  align-items: center;
+}
+.text1icon1 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #2a2a2a;
+}
+.text2icon1 {
+  font-size: 15px;
+  font-weight: 200;
+  padding-top: 4px;
+  width: 70%;
+}
+.icon2 {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  align-items: center;
+}
+.text1icon2 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #2a2a2a;
+}
+.text2icon2 {
+  font-size: 15px;
+  font-weight: 200;
+  padding-top: 4px;
+  width: 70%;
+}
+
+.icon3 {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  align-items: center;
+}
+
+.text1icon3 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #2a2a2a;
+}
+.text2icon3 {
+  font-size: 15px;
+  font-weight: 200;
+  padding-top: 4px;
+  width: 70%;
+}
+.blok2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: black;
+}
+.servis {
+  background: #ffb400;
+  padding: 2rem 2rem 3rem 2.5rem;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  min-width: 100px;
+  justify-content: space-around;
+}
+/* Адаптивне меню */
+@media (max-width: 1250px) {
+  .menu {
+    gap: 0.7rem;
+  }
+}
+@media (max-width: 1050px) {
+  .menu {
+    display: none; /* Приховуємо меню */
+    flex-direction: column;
+    background: #444;
+    position: absolute;
+    top: 5%;
+    right: 10%;
+    padding: 1rem;
+    border-radius: 8px;
+
+    min-width: 150px;
+
+    z-index: 1;
+  }
+
+  .menu.active {
+    display: flex; /* Відображаємо при активації */
+  }
+
+  .burger-menu {
+    display: flex; /* Відображаємо бургер */
+  }
+}
+@media (max-width: 760px) {
+  .menu {
+    display: none; /* Приховуємо меню */
+    flex-direction: column;
+    background: #444;
+    position: absolute;
+    top: 5%;
+    right: 20%;
+    padding: 1rem;
+    border-radius: 8px;
+
+    min-width: 150px;
+
+    z-index: 1;
+  }
+}
+/* Адаптивні стилі */
+@media (max-width: 768px) {
+  .blok {
+    width: 100%; /* Зменшуємо ширину для мобільних */
+    padding: 2rem;
+  }
+  .vector1 {
+    display: flex;
+    align-items: center;
+  }
+  .text1Vector {
+    font-size: 3rem; /* Менший розмір шрифта */
+  }
+  .backround {
+    width: 1rem;
+    height: 6rem;
+  }
+
+  .text2Vector {
+    font-size: 1rem;
+  }
+
+  .servis {
+    width: 100%; /* Заповнює весь контейнер */
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .text1Vector {
+    font-size: 1.8rem; /* Ще менший шрифт */
+  }
+
+  .buttonVector {
+    font-size: 0.9rem;
+    padding: 0.8rem 1.5rem;
+  }
+  .vector1 {
+    display: flex;
+    align-items: center;
+  }
+  .backround {
+    width: 4rem;
+    height: 4rem;
+  }
+  .icon1,
+  .icon2,
+  .icon3 {
+    flex-direction: column; /* Вертикальне розташування для вузьких екранів */
+  }
+}
+@media (max-width: 1000px) {
+  .servis {
+    /* Заповнює весь контейнер */
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+}
+.bt-project {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 21em;
+  padding: 2rem;
+}
+.text-bt {
+  font-size: 40px;
+  font-weight: bold;
+}
+.bt2 {
+  font-size: 14px;
+  color: #ffb400;
+  background: #ffffff;
+  border: 4px solid #ffb400;
+  padding: 2em 4em;
+}
+.blok3 {
+  display: flex;
+  background: #f7f7f7;
+}
+.text-img {
+  padding-left: 134px;
+}
+.texttitle1 {
+  display: flex;
+  padding-top: 2rem;
+}
+.twoBoxes {
+  display: flex;
+}
+.titleMain {
+  font-size: 40px;
+  font-weight: bold;
+  padding-top: 8rem;
+}
+.icon4 {
+  padding-top: 2rem;
+}
