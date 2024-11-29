@@ -297,27 +297,34 @@ table {
     gap: 1rem;
   }
 }
+:root {
+  --primary-color: #ffb400;
+  --secondary-color: #2a2a2a;
+  --background-color: #f7f7f7;
+  --font-size-large: 40px;
+  --font-size-medium: 15px;
+  --font-size-small: 12px;
+}
 .bt-project {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 21em;
-  padding: 2rem;
 }
 .text-bt {
   font-size: 40px;
   font-weight: bold;
 }
 .bt2 {
-  font-size: 14px;
-  color: #ffb400;
+  font-size: var(--font-size-small);
+  color: var(--primary-color);
   background: #ffffff;
-  border: 4px solid #ffb400;
+  border: 4px solid var(--primary-color);
   padding: 2em 4em;
 }
 .blok3 {
   display: flex;
-  background: #f7f7f7;
+  background: var(--background-color);
   box-sizing: border-box;
 }
 .text-img {
@@ -325,12 +332,10 @@ table {
 }
 .texttitle1 {
   display: flex;
-  /* flex-direction: column; */
-  padding-top: 2rem;
-  padding-bottom: 112px;
-  padding-left: 134px;
-  gap: 80px;
-  font-size: 15px;
+  flex-direction: column; /* Можна зробити так, щоб текст був вертикальним */
+  padding: 2rem 134px 112px 134px; /* Використовуємо 2rem для універсальності */
+  gap: 20px;
+  font-size: var(--font-size-medium);
   font-weight: 300;
   color: #666666;
   margin-right: 74px;
@@ -353,8 +358,12 @@ table {
   height: 12.4%;
   flex-wrap: wrap;
 }
+.img1 {
+  height: 100%;
+  width: 100%;
+}
 .titleMain {
-  font-size: 40px;
+  font-size: 2.5rem; /* Використовуємо rem для більшої гнучкості */
   font-weight: bold;
   padding-top: 8rem;
   padding-left: 134px;
@@ -363,20 +372,13 @@ table {
   padding-top: 2rem;
   padding-left: 134px;
 }
-.img1 {
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-}
 .yellowBx {
-  background: #ffb400;
+  background: var(--primary-color);
   width: 50%;
-  /* padding-top: 24px; */
 }
 .greyBx {
-  background: #2a2a2a;
+  background: var(--secondary-color);
   width: 50%;
-  /* padding-top: 24px; */
 }
 .number1 {
   font-size: 40px;
@@ -391,7 +393,6 @@ table {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* padding-bottom: 14px; */
 }
 .number2 {
   font-size: 40px;
@@ -408,48 +409,4 @@ table {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* padding-bottom: 14px; */
-}
-/* Медіа-запити для адаптації */
-@media (max-width: 768px) {
-  .texttitle1 {
-    padding-left: 16px; /* Зменшення відступів */
-    padding-right: 16px;
-    gap: 20px; /* Менший проміжок між елементами */
-    font-size: 14px; /* Зменшення розміру шрифту */
-    line-height: 22px; /* Відповідно до розміру шрифту */
-  }
-
-  .button2 {
-    padding: 12px 32px; /* Менший розмір кнопки */
-    font-size: 12px; /* Менший шрифт */
-    margin-top: 24px; /* Зменшення відступів */
-  }
-
-  .titleMain {
-    font-size: 24px; /* Зменшення заголовка */
-    padding-top: 4rem;
-    padding-left: 16px;
-  }
-
-  .icon4 {
-    padding-top: 1rem; /* Зменшення верхнього відступу */
-    padding-left: 16px;
-  }
-
-  .yellowBx,
-  .greyBx {
-    width: 100%; /* На мобільних блоки займають повну ширину */
-    padding: 16px; /* Додано внутрішні відступи */
-  }
-
-  .number1,
-  .number2 {
-    font-size: 28px; /* Зменшення розміру числа */
-  }
-
-  .textNumber1,
-  .textNumber2 {
-    font-size: 10px; /* Зменшення шрифту для опису чисел */
-  }
 }
