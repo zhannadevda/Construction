@@ -318,22 +318,138 @@ table {
 .blok3 {
   display: flex;
   background: #f7f7f7;
+  box-sizing: border-box;
 }
 .text-img {
-  padding-left: 134px;
+  box-sizing: content-box;
 }
 .texttitle1 {
   display: flex;
+  /* flex-direction: column; */
   padding-top: 2rem;
+  padding-bottom: 112px;
+  padding-left: 134px;
+  gap: 80px;
+  font-size: 15px;
+  font-weight: 300;
+  color: #666666;
+  margin-right: 74px;
+  letter-spacing: 0.5px;
+  line-height: 27px;
+}
+.textf2 {
+  padding-top: 2.2rem;
+}
+.button2 {
+  margin-top: 44px;
+  font-size: 14px;
+  font-weight: bold;
+  border: 3px solid #2a2a2a;
+  padding: 16px 54px;
 }
 .twoBoxes {
   display: flex;
+  box-sizing: content-box;
+  height: 12.4%;
+  flex-wrap: wrap;
 }
 .titleMain {
   font-size: 40px;
   font-weight: bold;
   padding-top: 8rem;
+  padding-left: 134px;
 }
 .icon4 {
   padding-top: 2rem;
+  padding-left: 134px;
+}
+.img1 {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+.yellowBx {
+  background: #ffb400;
+  width: 50%;
+  /* padding-top: 24px; */
+}
+.greyBx {
+  background: #2a2a2a;
+  width: 50%;
+  /* padding-top: 24px; */
+}
+.number1 {
+  font-size: 40px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.textNumber1 {
+  font-size: 12px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* padding-bottom: 14px; */
+}
+.number2 {
+  font-size: 40px;
+  font-weight: bold;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.textNumber2 {
+  font-size: 12px;
+  font-weight: bold;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* padding-bottom: 14px; */
+}
+/* Медіа-запити для адаптації */
+@media (max-width: 768px) {
+  .texttitle1 {
+    padding-left: 16px; /* Зменшення відступів */
+    padding-right: 16px;
+    gap: 20px; /* Менший проміжок між елементами */
+    font-size: 14px; /* Зменшення розміру шрифту */
+    line-height: 22px; /* Відповідно до розміру шрифту */
+  }
+
+  .button2 {
+    padding: 12px 32px; /* Менший розмір кнопки */
+    font-size: 12px; /* Менший шрифт */
+    margin-top: 24px; /* Зменшення відступів */
+  }
+
+  .titleMain {
+    font-size: 24px; /* Зменшення заголовка */
+    padding-top: 4rem;
+    padding-left: 16px;
+  }
+
+  .icon4 {
+    padding-top: 1rem; /* Зменшення верхнього відступу */
+    padding-left: 16px;
+  }
+
+  .yellowBx,
+  .greyBx {
+    width: 100%; /* На мобільних блоки займають повну ширину */
+    padding: 16px; /* Додано внутрішні відступи */
+  }
+
+  .number1,
+  .number2 {
+    font-size: 28px; /* Зменшення розміру числа */
+  }
+
+  .textNumber1,
+  .textNumber2 {
+    font-size: 10px; /* Зменшення шрифту для опису чисел */
+  }
 }
